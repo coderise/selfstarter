@@ -39,13 +39,10 @@ use_video_placeholder: true
 price:  19.95
 payment_description: "This is what will appear on your manage.stripe.com dashboard"
 
-# To find your access key and secret key, head over to here --> http://bit.ly/R4I4ky (Follow that guide in the Seller Central page)
-price: 	19.95
-
 # if use_payment_options is set to true, then a set of radio buttons will be displayed with various payment options.
 # There is a PaymentOption model for storing info about payment options.  To set up your payment options you should
 # put code in seeds.rb, then run rake db:seed
-use_payment_options: false
+use_payment_options: true
 
 payment_description: "Thanks for supporting Coderise!"
 
@@ -80,7 +77,7 @@ progress_text: "Success!"
 # Call to action section
 
 # On Lockitron, it's "First Batch Ships in March 2013"
-ships: ""
+ships: "April 2013"
 
 # On Lockitron, it's "Reserve Now"
 call_to_action: "Support Now"
