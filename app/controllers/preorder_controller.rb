@@ -2,6 +2,7 @@ class PreorderController < ApplicationController
   skip_before_filter :verify_authenticity_token, :only => :ipn
 
   def index
+
   end
 
   def checkout!
