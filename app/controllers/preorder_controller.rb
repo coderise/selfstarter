@@ -18,7 +18,7 @@ class PreorderController < ApplicationController
     )
 
     # Create an order for this user.
-    @order = Order.generate
+    @order = Order.next_order_number
     @order.stripe_customer_id = customer.id
     @order.name = Settings.product_name
     @order.price = Settings.price
