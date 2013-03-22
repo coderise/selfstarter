@@ -56,7 +56,7 @@ stripe_test_secret_key: 'sk_test_au47p9r2c6UlNxsjh8EzLrzm'
 stripe_live_publishable_key: 'pk_live_tXBaNRGqpaWWoiER4QeWn6tU'
 stripe_live_secret_key: 'sk_live_GWYYxoYWwoeKSyDtXlam4Ict'
 # Do you want to use Stripe in Live or Test mode? 'live' or 'test'
-stripe_payments_mode: 'live'
+stripe_payments_mode: 'test'
 
 # Stats settings
 
