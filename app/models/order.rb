@@ -13,12 +13,12 @@ class Order < ActiveRecord::Base
 
   def self.generate
     o = self.new
-    o.order_number = Order.next_order_number || 1
+    o.number = Order.next_order_number || 1
     o
   end
 
   def self.next_order_number
-    Order.order("order_number DESC").limit(1).first.order_number.to_i + 1 if Order.count > 0
+    Order.order("number DESC").limit(1).first.order_number.to_i + 1 if Order.count > 0
   end
 
   def generate_uuid!
