@@ -54,10 +54,10 @@ payment_description: "Thanks for supporting Coderise!"
 # this value will be added to the price to create a charge limit
 charge_limit: 25.00
 # Stripe settings -- you'll need a Stripe account, sign up here --> https://manage.stripe.com/register
-stripe_test_publishable_key: 'pk_test_NAa5DM7jXw77nUjWs32qirdC'
-stripe_test_secret_key: 'sk_test_au47p9r2c6UlNxsjh8EzLrzm'
-stripe_live_publishable_key: 'pk_live_tXBaNRGqpaWWoiER4QeWn6tU'
-stripe_live_secret_key: 'sk_live_GWYYxoYWwoeKSyDtXlam4Ict'
+stripe_test_publishable_key: 'pk_test_42dHXsI4k2X3UOxVCsT8q4EV'
+stripe_test_secret_key: 'sk_test_cuCroEd9h8kjUVF7iTqGLDyf'
+stripe_live_publishable_key: 'pk_live_k6tUR1PQjmRiyFjdHQu4CXgS'
+stripe_live_secret_key: 'sk_live_xsbLNNmUsBTOug22tiQUpZ1d'
 # Do you want to use Stripe in Live or Test mode? 'live' or 'test'
 stripe_payments_mode: 'live'
 
