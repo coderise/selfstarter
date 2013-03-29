@@ -12,7 +12,9 @@
   {
     line-height: 1.5;
   }
-  #checkout
+}
+
+#checkout
   {
     input[type=text], input[type=email]
     {
@@ -33,7 +35,6 @@
       border: none;
     }
   }
-}
 
 .sidebar
 {
