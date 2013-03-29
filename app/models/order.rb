@@ -40,7 +40,7 @@ class Order < ActiveRecord::Base
   end
 
   def self.revenue
-    Order.current.to_f * Settings.price
+    Order.sum(:price)
   end
 
   validates_presence_of :name, :price, :user_id
