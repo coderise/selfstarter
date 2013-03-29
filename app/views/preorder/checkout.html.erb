@@ -20,9 +20,9 @@
         <%= text_field_tag "card_cvc", nil, :placeholder => "CVC", :required => "required", :id => "card_cvc", :name => nil, :maxlength => 4 %>
         <%= submit_tag "Checkout", :class => "blue_button disabled", :id => "amazon_button" %>
     </div>
-    <% end %>
-
     <%= render 'preorder/checkout/sidebar' %>
+    <% end %>
+    
     <%= render 'stripe_js' %>
   </div>
 </div>
