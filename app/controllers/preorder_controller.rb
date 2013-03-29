@@ -38,6 +38,7 @@ class PreorderController < ApplicationController
     @order.phone = params[:phone]
     @order.zip = params[:address_zip]
     @order.country = params[:country]
+    @order.payment_option_id = payment_option_id
     @order.save!
 
     redirect_to root_url
