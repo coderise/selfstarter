@@ -41,6 +41,8 @@ class PreorderController < ApplicationController
     @order.payment_option_id = payment_option_id
     @order.save!
 
+    Notifier.donate_email(customer).deliver
+
     redirect_to root_url
   end
 
