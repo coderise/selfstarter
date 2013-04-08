@@ -1,5 +1,38 @@
-<div id="header">
-  <div class="wrapper clearfix">
-    <a href="http://coderise.org"><h1 id="lockitron_header"><%= Settings.product_name %></h1></a>
-  </div>
-</div>
+<header role="banner" class="container" id="#header">
+	<div class="row">
+		<div class="twelvecol">
+			<a class="logo" href="index.html"><%= Settings.product_name %></a>
+			<a class="icon-list">menu</a>
+			<nav role="navigation">
+				<ul>
+					<li class="active"><a href="index.html">Home</a></li>
+					<li class="dropdown">
+						<a>
+							About
+							<span class="icon-dropdown-arrow">&#9660;</span>
+						</a>
+						<ul>
+							<li><a href="about.html">About us</a></li>
+							<li><a href="how.html">How it works</a></li>
+							<li><a href="mentors.html">Mentors</a></li>
+							<li><a href="team.html">Our Team</a></li>
+							<li><a href="students.html">Our Students</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#">
+							Press
+							<span class="icon-dropdown-arrow">&#9660;</span>
+						</a>
+						<ul>
+							<li><a href="press.html">Coverage</a></li>
+							<li><a href="releases.html">Press Releases</a></li>
+						</ul>
+					</li>
+					<li><a href="contribute.html">Support</a></li>
+					<li class="last"><a href="apply.html">Apply</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>	
+</header>
