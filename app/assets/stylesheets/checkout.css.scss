@@ -224,8 +224,8 @@
 
 .sidebar
   {
-  float: right;
-  width: 300px;
+  *float: right;
+  *width: 300px;
   p
   {
     font-size: 18px;

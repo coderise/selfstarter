@@ -1,6 +1,7 @@
 <div class="container">
   <div class="row">
-    <div class="eightcol">
+    <div class="sixcol">
+      <%= render 'preorder/checkout/sidebar' %>
       <div id="backing">
         <ul>
           <li class="stats" id="backers">
@@ -36,16 +37,10 @@
             </div>
             <div id='progress_text'><%= Order.percent %>% <%= Settings.progress_text %></div>
           </div>
-        <% end %>
-        
-        <div id="reserve_container">
-          <p id="ship_date"><%= Settings.ships %></p>
-          <a href="/preorder/checkout" class="blue_button reserve"><%= Settings.call_to_action %></a>
-          <p id="price"><%= Settings.price_human %></p>
-          <p><%= Settings.dont_give_them_a_reason_to_say_no %></p>
-          <%= like_button %>
-        </div>
+        <% end %> 
       </div>
+    </div>
+    <div class="sixcol last">  
       <div id="description">
         <h5>Where your contributions will go</h5>
         <p><strong>Travel costs</strong> for inspirational tech entrepreneurs and programmers to visit us.</p>
@@ -59,9 +54,6 @@
         <p>In terms of connections, we mean the necessay exchange of past experiences from people already out there launching a startup that is filling a global social need.  To empower youth that likely don't know much about the programming and tech start up scene, to meet people like @AndresBarreto from Onswipe,  Alex Torrenegra (@Torrenegra) and our other tech entrepreneurs is essential to accompany tools with a vision. </p>
         <p>We plan to do all of this in two months in EAFIT, the top university in Medellin, three times a week, covering transport and food for all participants and speakers that come all the way out to Medellín for the program.</p>
       </div>
-        
-      </div>
-    <%= render 'preorder/checkout/sidebar' %>
+    </div>
   </div>
-  
 </div>

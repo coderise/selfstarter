@@ -1,6 +1,6 @@
 #backing
 {
-  float: left;
+  *float: left;
   width: 383px;
   margin: 20px 0 0 40px;
   #backers
@@ -52,7 +52,7 @@ body.lt-ie9
 #progress_bg
 {
   margin-top: 20px;
-  float: left;
+  *float: left;
   height: 40px;
   -moz-box-shadow: 0 1px 1px rgba(0,0,0,.41); /* drop shadow */
   -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.41); /* drop shadow */
@@ -60,7 +60,7 @@ body.lt-ie9
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
   border-radius: 30px;
-  width: 383px;
+  width: 100%;
   background: #dbdbdb;
   #progress
   {
