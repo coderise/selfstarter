@@ -1,18 +1,17 @@
 <div class="container">
   <div class="row">
     <div class="sixcol">
-      <%= render 'preorder/checkout/sidebar' %>
       <div id="backing">
         <ul>
           <li class="stats" id="backers">
             <%= number_with_delimiter Order.current, :delimiter => "," %>
             <span><%= Settings.primary_stat %></span>
           </li>
-          <li class="stats">
+          <li class="stats" id="revenue">
             <%= number_to_currency Order.revenue, :precision => 0 %>
             <span>of <%= number_to_currency Settings.project_goal.to_f, :precision => 0 %></span>
           </li>
-
+          <!--
           <% if Settings.expiration_date.present? %>
             <li class="stats" id="days">
               <%= distance_of_time_in_words_to_now(Settings.expiration_date).gsub(/\D/, "") %>
@@ -24,6 +23,7 @@
                 <span>days left</span>
               </li>
           <% end %>
+          -->
         </ul>
         
         <% if Order.revenue.to_f < Order.goal.to_f %>
@@ -39,6 +39,7 @@
           </div>
         <% end %> 
       </div>
+      <%= render 'preorder/checkout/sidebar' %>
     </div>
     <div class="sixcol last">  
       <div id="description">
