@@ -39,9 +39,9 @@
           </div>
         <% end %> 
       </div>
-      <%= form_tag "/preorder/prefill", :id => "checkout" do %>
+      <%= form_tag "/preorder/checkout", :id => "checkout" do %>
         <%= render 'preorder/checkout/sidebar' %>
-        <%= submit_tag "Checkout", :class => "blue_button", :id => "amazon_button" %>
+        <%= submit_tag "Support now", :class => "blue_button", :id => "amazon_button" %>
       <% end %>
     </div>
     <div class="sevencol last">  
