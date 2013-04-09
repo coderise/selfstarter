@@ -1,6 +1,5 @@
-@import url(http://fonts.googleapis.com/css?family=PT+Sans+Narrow);
-@import url(http://fonts.googleapis.com/css?family=PT+Serif);
-
+@import "variables";
+@import "primitives";
 @import "grid";
 @import "header";
 @import "footer";
@@ -8,3 +7,6 @@
 @import "homepage";
 @import "share";
 @import "checkout";
+
+@import url(http://fonts.googleapis.com/css?family=PT+Sans+Narrow);
+@import url(http://fonts.googleapis.com/css?family=PT+Serif);
