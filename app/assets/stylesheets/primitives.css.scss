@@ -26,6 +26,8 @@
 
 html, body {
   width: 100%;
+  font-size: $font_size;
+
 }
 
 body {
@@ -46,7 +48,6 @@ form
 
 body, input, textarea 
 {
-  font-size: $font_size;
   font-family: $primary_font, $tertiary_font;
   color: $text_color;
   *text-shadow: $text_shadow;
@@ -64,7 +65,29 @@ i
   font-style: italic;
 }
 
+wrap{
+  padding: 40px 0;
+}
 
+.wrap-mini{
+  padding: 20px 0;
+}
+
+.wrap-gray{
+  background: #f2f2f2;
+  *padding-top: 1.25rem;
+  *padding-bottom: 1.25rem;
+  margin: 0;
+  -webkit-transition: height 0.15s ease-in-out;
+  -moz-transition: height 0.15s ease-in-out;
+  -o-transition: height 0.15s ease-in-out;
+  transition: height 0.15s ease-in-out;
+}
+
+.wrap-navy{
+  background: #063a5b;
+  margin: 0;
+}
 
 
 // Used in the FAQ
