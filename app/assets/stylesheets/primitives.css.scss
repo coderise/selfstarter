@@ -120,9 +120,10 @@ h1 {
 
 h2 {
   font-family: $primary_font, $secondary_font, $tertiary_font;
-  font-size: 45px;
+  font-size: 1.45rem;
+  letter-spacing: .165em;
   color: $h2_color;
-  margin-bottom: 50px;
+  margin-bottom: 1em;
 }
 
 h4 {
@@ -133,8 +134,11 @@ h4 {
 
 h5 {
   font-family: $primary_font, $secondary_font, $tertiary_font;
-  margin-bottom: 10px;
+  margin-bottom: 1em;
   color: $h5_color;
+  text-transform: uppercase;
+  font-size: 1.15rem;
+  letter-spacing: .135em;
 }
 
 .wrapper {
