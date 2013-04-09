@@ -48,7 +48,7 @@ form
 body, input, textarea 
 {
   font-size: $font_size;
-  font-family: $primary_font, $secondary_font, $tertiary_font;
+  font-family: $primary_font, $tertiary_font;
   color: $text_color;
   *text-shadow: $text_shadow;
   -webkit-font-smoothing: antialiased;
@@ -101,7 +101,7 @@ h1 {
   margin: 0 auto;
   margin-left: 380px;
   width: 174px;
-  font-family: Helvetica;
+  font-family: $secondary_font, $tertiary_font;
   font-size: 42px;
   font-weight: bold;
   color: $h1_color;
@@ -120,26 +120,32 @@ h1 {
 }
 
 h2 {
-  font-family: $primary_font, $secondary_font, $tertiary_font;
-  font-size: 1.45rem;
-  letter-spacing: .165em;
+  font-family: $secondary_font, $tertiary_font;
+  font-weight: bold;
+  font-size: 1.55rem;
+  letter-spacing: .2em;
   color: $h2_color;
   margin-bottom: 1em;
 }
 
 h4 {
-  font-size: 36px;
+  font-family: $secondary_font, $tertiary_font;
+  font-size: 1.25rem;
+  letter-spacing: .1em;
+  font-weight: bold;
   color: $h4_color;
-  margin-bottom: 30px;
+  margin-bottom: 1em;
 }
 
-body h5 {
-  font-family: $primary_font, $secondary_font, $tertiary_font;
+h5 {
+  font-family: $secondary_font, $tertiary_font;
+  font-size: 1.15rem;
+  letter-spacing: .1em;
+  font-weight: bold;
   margin-bottom: 1em;
   color: $h5_color;
   text-transform: uppercase;
-  font-size: 1.15rem;
-  letter-spacing: .135em;
+  
 }
 
 .wrapper {
@@ -178,39 +184,41 @@ body h5 {
 
 body.lt-ie9 {
   .blue_button {
-    background-color: #0D97E6 !important;
+    background-color: rgba(6, 58, 91, 0.75);
     background-image: none !important;
   }
   .blue_button:hover {
-    background-color: #add8e6 !important;
+    background-color: rgba(6, 58, 91, 1) !important;
   }
 }
 
 .blue_button {
-  display: block;
-  background-color: #063A5B;
-  letter-spacing: .3em;
-  text-transform: uppercase;
+  font-family: $secondary_font, $tertiary_font;
+  display: inline-block;
   font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: .3em;
+  padding: 1rem;
   color: $button_color; /* text color */
-  *text-shadow: 0 -1px 1px $button-text_shadow_color; /* drop shadow */
+  cursor: pointer;
+  background-color: rgba(6, 58, 91, 0.75);
   -webkit-border-radius: $button_border_radius;
-  -moz-border-radius: $button_border_radius;
-  border-radius: $button_border_radius;
-  font-family: $primary_font, $secondary_font, $tertiary_font;
+     -moz-border-radius: $button_border_radius;
+          border-radius: $button_border_radius;
 }
 .blue_button:hover {
-  background-color: rgba(6, 58, 91, 0.75);
+  text-decoration: none;  
+  background-color: rgba(6, 58, 91, 1);
     -webkit-transition: all .25s;
      -moz-transition: all .25s;
           transition: all .25s;
-  text-decoration: none;  
 }
 
 .blue_button:active {
-  background-color: rgba(6, 58, 91, 0.75);
+  text-decoration: none;  
+  background-color: rgba(6, 58, 91, 1);
     -webkit-transition: all .25s;
      -moz-transition: all .25s;
           transition: all .25s;
-  text-decoration: none;
 }
