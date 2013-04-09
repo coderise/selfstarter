@@ -1,0 +1,5 @@
+<div class="sidebar fourcol">
+	<%= form_tag "/preorder/prefill", :id => "checkout" do %>
+  	<%= render 'preorder/payment_options' %>
+  	<%= submit_tag "Support now", :class => "blue_button", :id => "amazon_button" %>
+</div>

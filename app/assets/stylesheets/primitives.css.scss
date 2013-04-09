@@ -95,7 +95,9 @@ details summary::-webkit-details-marker { display:none; content: ""; }
 .no-details details > summary::before { content:none }
 .no-details details.open > summary::before {   content:none }
 
-
+body h1, body h2, body h3, body h4, body h5, body h6{
+  margin-bottom: 1em;
+}
 
 h1 {
   margin: 0 auto;
