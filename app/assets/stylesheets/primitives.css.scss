@@ -31,6 +31,7 @@ html, body {
 
 body {
   background: $body_background;
+  line-height: $line_height;
 }
 
 .disabled
@@ -132,7 +133,7 @@ h4 {
   margin-bottom: 30px;
 }
 
-h5 {
+body h5 {
   font-family: $primary_font, $secondary_font, $tertiary_font;
   margin-bottom: 1em;
   color: $h5_color;
