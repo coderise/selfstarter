@@ -1,0 +1,22 @@
+/* Media
+ *************************************/
+
+ @media handheld, only screen and (max-width: 1023px) {
+ }
+
+ @media handheld, only screen and (max-width: 767px) {
+ 	#backing ul {
+ 		width: 80%
+ 	}
+ }
+
+ @media handheld, only screen and (max-width: 479px) {
+ 	#backing .stats {
+ 		font-size: 1em;
+ 		padding-right: 1em;
+		padding-left: 1em;
+ 	}
+ 	#backing .stats span {
+ 		font-size: 0.9em;
+ 	}
+ }
