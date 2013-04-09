@@ -4,13 +4,49 @@
  @media handheld, only screen and (max-width: 1023px) {
  }
 
- @media handheld, only screen and (max-width: 767px) {
- 	#backing ul, #progress_bg {
- 		width: 80%
- 	}
- }
+@media handheld, only screen and (max-width: 767px) {
+	#backing ul, #progress_bg {
+		width: 80%
+	}
+
+	.logo, header[role="banner"] ul {
+    	float: none;
+  	}
+
+  	header[role="banner"] ul {
+    	display: none;
+  	}
+
+  	.icon-list{
+    	display: block;
+  	}
+
+  	header[role="banner"] ul ul {
+    	margin-top: 11px;
+  	}
+
+  	header[role="banner"] ul li {
+	    float: none;
+	    padding: 10px;
+	    border-bottom: 1px solid rgba(9,161,161,0.2);
+  	}	
+
+  	header[role="banner"] ul ul li{
+    	border-top: none;
+    	padding:10px;
+  	}
+
+}
 
  @media handheld, only screen and (max-width: 479px) {
+ 	.logo{
+	    display: block;
+	    width: 94px;
+	    height: 50px;
+	    background: url(../images/brand-icon.png) no-repeat center center;
+	}
+
+
  	#backing .stats {
  		font-size: 1em;
  		padding-right: 1em;
