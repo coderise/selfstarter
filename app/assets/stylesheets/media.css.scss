@@ -2,9 +2,21 @@
  *************************************/
 
  @media handheld, only screen and (max-width: 1023px) {
+ 	h2{
+    	font-size: 1.25rem;
+  	}
+
+  	h4{
+    	font-size: 1.05rem;
+  	}
  }
 
 @media handheld, only screen and (max-width: 767px) {
+	h2{
+    	font-size: 1.25rem;
+    	letter-spacing: .145em;
+  	}
+
 	#backing ul, #progress_bg {
 		width: 80%
 	}
@@ -39,6 +51,18 @@
 }
 
  @media handheld, only screen and (max-width: 479px) {
+ 	h2 {
+    	font-size: 1.05rem;
+  	}
+
+  	h4 {
+    	font-size: 1rem;
+  	}
+
+  	p{
+    	font-size: 0.75rem;
+  	}
+
  	.logo{
 	    display: block;
 	    width: 94px;
