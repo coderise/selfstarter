@@ -2,11 +2,11 @@
 @import url(http://fonts.googleapis.com/css?family=PT+Serif);
 
 @import "variables";
-@import "primitives.css.scss";
-@import "grid.css.scss";
-@import "header.css.scss";
-@import "footer.css.scss";
+@import "primitives";
+@import "grid.css";
+@import "header.css";
+@import "footer.css";
 
-@import "homepage.css.scss";
-@import "share.css.scss";
-@import "checkout.css.scss";
+@import "homepage";
+@import "share.css";
+@import "checkout";
