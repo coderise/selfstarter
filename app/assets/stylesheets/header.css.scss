@@ -67,7 +67,8 @@ header[role="banner"] li:first-child{
 header[role="banner"] li a{
   color: #f2f2f2;
   display: block;
-  font-family: "PTSansCaptionBold";
+  font-weight: bold;
+  *font-family: "PTSansCaptionBold";
   font-size: .715em;
   text-transform: uppercase;
   letter-spacing: .115em;
