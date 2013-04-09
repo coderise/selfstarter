@@ -6,8 +6,7 @@ class PreorderController < ApplicationController
 
   def prefill
   end
-    
-  end
+
   def checkout!
     @user = User.find_or_create_by_email!(params[:email])
     redirect_to root_url unless params[:stripe_token]
