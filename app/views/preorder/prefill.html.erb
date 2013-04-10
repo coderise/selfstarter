@@ -8,7 +8,7 @@
         <br />
 	      <br />
       </p>
-        <%= hidden_field_tag "payment_option", payment_option_id, :required => "required", :id => "payment_option" %>   
+        <%= hidden_field_tag "payment_option", params[:payment_option], :required => "required", :id => "payment_option" %>   
         <%= text_field_tag "name", nil, :placeholder => "Name", :required => "required", :id => "name" %>
         <%= email_field_tag "email", nil, :placeholder => "Email", :required => "required", :id => "email" %>
         <%= text_field_tag "address_line1", nil, :placeholder => "Address line 1", :required => "required", :id => "address_line1" %>

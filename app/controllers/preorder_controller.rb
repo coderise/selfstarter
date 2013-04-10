@@ -5,8 +5,6 @@ class PreorderController < ApplicationController
   end
 
   def prefill
-    payment_option_id = params['payment_option']
-    render 'prefill'
   end
 
   def checkout!
