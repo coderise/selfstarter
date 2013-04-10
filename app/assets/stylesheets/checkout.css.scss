@@ -181,7 +181,7 @@
           *padding-left: 112px;
           float: left;
 
-          line-height: 24px !important;
+          line-height: 150% !important;
           strong
           {
             font-weight: bold;
@@ -235,8 +235,7 @@
   *width: 300px;
   p
   {
-    font-size: 18px;
+    font-size: 1em;
     margin-bottom: 30px;
-    line-height: 1.3;
   }
 }
