@@ -5,6 +5,11 @@ class PreorderController < ApplicationController
   end
 
   def prefill
+    if Settings.use_payment_options
+      payment_option_id = params['payment_option']
+      raise Exception.new("No payment option was selected") if payment_option_id.nil?
+    end
+    redirect_to :controller => "preorder", :action => "checkout", :id => payment_option_id
   end
 
   def checkout!
