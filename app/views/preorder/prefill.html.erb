@@ -10,7 +10,7 @@
   <div class="row">
     <div class="twelvecol">
       <p>
-        All of your payment information will be secured and stored with <a href="https://stripe.com/">Stripe</a>. Enter your details below.
+        All of your payment information will be secured and stored with <a class="link" href="https://stripe.com/">Stripe</a>. Enter your details below.
       </p>
     </div>
   </div>
@@ -30,7 +30,9 @@
         <%= text_field_tag "card_expiry_month", nil, :placeholder => "Expiry month (e.g. 3)", :required => "required", :id => "card_expiry_month", :name => nil, :maxlength => 3 %>
         <%= text_field_tag "card_expiry_year", nil, :placeholder => "Expiry year (e.g. 2015)", :required => "required", :id => "card_expiry_year", :name => nil, :maxlength => 4 %>
         <%= text_field_tag "card_cvc", nil, :placeholder => "CVC", :required => "required", :id => "card_cvc", :name => nil, :maxlength => 4 %>
-        <%= submit_tag "Checkout", :class => "blue_button disabled", :id => "amazon_button" %>
+        <div style="width: 75%">
+          <%= submit_tag "Checkout", :class => "blue_button disabled", :id => "amazon_button" %>
+          <a class="stripe" href="https://stripe.com/">Powered by stripe</a>
       <% end %>
     </div>
   </div>
