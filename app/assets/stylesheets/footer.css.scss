@@ -5,6 +5,7 @@
   *bottom: 0;
   width: 100%;
   height: 46px;
+  font-family: $secondary_font, $tertiary_font;
 
   ul 
   {
@@ -16,13 +17,16 @@
   }
   a 
   {
-    font-size: 0.75rem;
     color: #FFFFFF;
-    font-family: $primary_font, $tertiary_font;
+  }
+  a:hover{
+    color: #09acb0;
   }
   p 
   {
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     color: #FFFFFF;
+    padding: 9px 20px;
+
   }
 }
