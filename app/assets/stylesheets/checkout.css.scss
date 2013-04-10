@@ -24,7 +24,7 @@
       border: 1px solid #e2e2e2;
       color: #626262;
       display: block;
-      margin: 0.5rem auto;
+      margin: 1rem 0 0 0;
       padding: 1rem;
       width: 75%;
       -webkit-appearance: none;
@@ -53,7 +53,7 @@
 .stripe {
   display: block;
   text-indent: -9999px;
-  background: url("/assets/stripe.png");
+  background: url("/assets/stripe.png") no-repeat center center;;
 }
 
 .sidebar
