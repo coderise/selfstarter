@@ -11,9 +11,14 @@
     <div class="twelvecol">
       <p>
         All of your payment information will be secured and stored with <a href="https://stripe.com/">Stripe</a>. Enter your details below.
-        <br />
-        <br />
       </p>
+    </div>
+  </div>
+</div>
+
+<div class="container wrap wrap-gray">
+  <div class="row">
+    <div class="twelvecol">
       <%= form_tag "/preorder/checkout", :id => "checkout" do %>
         <%= hidden_field_tag "payment_option", params[:payment_option], :required => "required", :id => "payment_option" %>   
         <%= text_field_tag "name", nil, :placeholder => "Name", :required => "required", :id => "name" %>
