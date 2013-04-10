@@ -36,6 +36,3 @@ gem 'stripe'
 
 # Configuration File
 gem 'rails_config'
-
-#jQuery
-gem 'jquery-rails'
