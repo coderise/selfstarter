@@ -8,13 +8,13 @@
 
 <div class="container wrap">
   <div class="row">
-    <%= form_tag "/preorder/checkout", :id => "checkout" do %>
-    <div class="main_content">
+    <div class="twelvecol">
       <p>
         All of your payment information will be secured and stored with <a href="https://stripe.com/">Stripe</a>. Enter your details below.
         <br />
         <br />
       </p>
+      <%= form_tag "/preorder/checkout", :id => "checkout" do %>
         <%= hidden_field_tag "payment_option", params[:payment_option], :required => "required", :id => "payment_option" %>   
         <%= text_field_tag "name", nil, :placeholder => "Name", :required => "required", :id => "name" %>
         <%= email_field_tag "email", nil, :placeholder => "Email", :required => "required", :id => "email" %>
@@ -26,9 +26,9 @@
         <%= text_field_tag "card_expiry_year", nil, :placeholder => "Expiry year (e.g. 2015)", :required => "required", :id => "card_expiry_year", :name => nil, :maxlength => 4 %>
         <%= text_field_tag "card_cvc", nil, :placeholder => "CVC", :required => "required", :id => "card_cvc", :name => nil, :maxlength => 4 %>
         <%= submit_tag "Checkout", :class => "blue_button disabled", :id => "amazon_button" %>
+      <% end %>
     </div>
   </div>
-  <% end %>
-
-  <%= render 'stripe_js' %>
+</div>  
+<%= render 'stripe_js' %>
 </div>
