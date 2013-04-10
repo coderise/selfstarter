@@ -6,14 +6,9 @@ class PreorderController < ApplicationController
 
   def prefill
     payment_option_id = params['payment_option']
-    redirect_to :action => "checkout", :option => payment_option_id
   end
 
-  def checkout
-    payment_option_id = params[:option]
-  end
-
-  def postfill!
+  def checkout!
     @user = User.find_or_create_by_email!(params[:email])
     redirect_to root_url unless params[:stripe_token]
 
