@@ -18,17 +18,24 @@
   {
     input[type=text], input[type=email]
     {
-      background-color: #FFFFFF;
-      padding: 1rem;
-      -webkit-border-radius: 4px;
-        -moz-border-radius: 4px;
-          border-radius: 4px;
-      border: 1px solid #E2E2E2;
-      color: #626262;
-      width: 350px;
+      font-size: 1rem;
+      background-color: white;
       outline: none;
+      border: 1px solid #e2e2e2;
+      color: #626262;
+      display: block;
+      margin: 0 0 1rem 0;
+      padding: 1rem;
       -webkit-appearance: none;
         -moz-appearance: none;
+      -webkit-transition: color 0.15s ease-in-out;
+        -moz-transition: color 0.15s ease-in-out;
+          -o-transition: color 0.15s ease-in-out;
+      transition: color 0.15s ease-in-out;
+      -webkit-border-radius: 4px;
+         -moz-border-radius: 4px;
+              border-radius: 4px;
+      
     }
     .invalid
       {
