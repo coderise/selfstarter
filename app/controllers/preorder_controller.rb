@@ -5,14 +5,15 @@ class PreorderController < ApplicationController
   end
 
   def prefill
-    if Settings.use_payment_options
-      payment_option_id = params['payment_option']
-      raise Exception.new("No payment option was selected") if payment_option_id.nil?
-    end
-    redirect_to :controller => "preorder", :action => "checkout", :id => payment_option_id
+    payment_option_id = params['payment_option']
+    redirect_to :action => "checkout", :option => payment_option_id
   end
 
-  def checkout!
+  def checkout
+    payment_option_id = params[:option]
+  end
+
+  def postfill!
     @user = User.find_or_create_by_email!(params[:email])
     redirect_to root_url unless params[:stripe_token]
 
@@ -25,7 +26,7 @@ class PreorderController < ApplicationController
     )
 
     if Settings.use_payment_options
-      payment_option_id = params['payment_option']
+      payment_option_id = params[:payment_option]
       raise Exception.new("No payment option was selected") if payment_option_id.nil?
       payment_option = PaymentOption.find(payment_option_id)
       price = payment_option.amount
