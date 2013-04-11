@@ -8,13 +8,6 @@
 PaymentOption.create(
     [
         {
-            amount_display: '$',
-            description: '<strong>Gratitude: </strong>We appreciate every donation! We will make sure you receive a shoutout on social media channels',
-            shipping_desc: '',
-            delivery_desc: '',
-            limit: -1
-        },
-        {
             amount: 25.00,
             amount_display: '$25',
             description: '<strong>Friend: </strong>Receive a heartfelt mention in our launch newsletter + a shoutout on social media channels on Coderise launch day!',
