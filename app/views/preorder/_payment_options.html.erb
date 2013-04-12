@@ -6,7 +6,7 @@
           <li>
             <%= radio_button_tag "payment_option", p.id, index == 0 ? true : false, class: 'payment_radio' %>
             <% if p.amount_display == '$' %>
-              <%= text_field_tag "amt_gross", 1, :placeholder => "$1", :id => "amt_gross" %>
+              <%= text_field_tag "amt_gross", nil, :placeholder => "$1", :id => "amt_gross" %>
             <% else %>
               <%= label_tag("payment_option_#{index}", p.amount_display) %>
             <% end %>
