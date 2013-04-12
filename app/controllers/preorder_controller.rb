@@ -16,7 +16,7 @@ class PreorderController < ApplicationController
       payment_option_id = params[:payment_option]
       raise Exception.new("No payment option was selected") if payment_option_id.nil?
       payment_option = PaymentOption.find(payment_option_id)
-      price = payment_option.amount == "0.00" ? params[:amt_gross] : payment_option.amount
+      price = payment_option.amount.to_f == 0.0 ? price = params[:amt_gross] : payment_option.amount
     else
       price = Settings.price
     end
@@ -31,16 +31,16 @@ class PreorderController < ApplicationController
     #)
 
     # Create a one-time Stripe charge and retrieve the charge object ID
-    begin
+    #begin
       charge = Stripe::Charge.create(
         :amount => (price * 100).to_i,
         :currency => "usd",
         :card => params[:stripe_token], # obtained with stripe_js
         :description => "Donation by " + params[:email]
       )
-    rescue Stripe::StripeError => e
-      puts e.http_status
-    end
+    #rescue Stripe::StripeError => e
+      #puts e.http_status
+    #end
 
     # Create an order for this user.
     @order = Order.generate
