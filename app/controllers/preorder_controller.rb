@@ -28,6 +28,13 @@ class PreorderController < ApplicationController
       price = Settings.price
     end
 
+    charge = Stripe::Charge.create(
+      :amount => price,
+      :currency => "usd",
+      :card => params[:stripe_token], # obtained with Stripe.js
+      :description => "Donation by " + params[:email]
+    )
+
     # Create an order for this user.
     @order = Order.generate
     @order.stripe_customer_id = customer.id
