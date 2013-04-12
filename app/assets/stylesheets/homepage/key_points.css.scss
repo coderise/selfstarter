@@ -14,3 +14,14 @@
   display: inline-block;
   float: left;
 }
+.video{
+  width: 480px;
+  height: 270px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+.square{
+  list-style: square;
+  list-style-position: outside;
+  padding-left: 1rem;
+}
