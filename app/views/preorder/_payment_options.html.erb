@@ -5,7 +5,11 @@
         <% PaymentOption.all.each_with_index do |p, index| %>
           <li>
             <%= radio_button_tag "payment_option", p.id, index == 0 ? true : false, class: 'payment_radio' %>
-            <%= label_tag("payment_option_#{index}", p.amount_display) %>
+            <% if p.amount_display == '$' %>
+              <%= text_field_tag "amt_gross", 1, :placeholder => "$1", :id => "amt_gross" %>
+            <% else %>
+              <%= label_tag("payment_option_#{index}", p.amount_display) %>
+            <% end %>
             <div class="description">
               <p class="full"><%= raw p.description %></p>
             </div>
