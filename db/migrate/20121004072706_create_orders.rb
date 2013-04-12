@@ -12,7 +12,7 @@ class CreateOrders < ActiveRecord::Migration
       t.string   :order_number
       t.decimal  :shipping
       t.string   :tracking_number
-      t.string   :stripe_customer_id
+      t.string   :stripe_charge_id
       t.string   :name
       t.decimal  :price
       t.string   :uuid

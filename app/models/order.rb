@@ -2,7 +2,7 @@ class Order < ActiveRecord::Base
   # Address details.
   attr_accessible :address_line1, :address_line2, :city, :state, :country, :zip, :phone
   # Shipping/billing details.
-  attr_accessible :order_number, :shipping, :tracking_number, :stripe_customer_id
+  attr_accessible :order_number, :shipping, :tracking_number, :stripe_charge_id
   # Product details.
   attr_accessible :name, :price
   attr_readonly :uuid
