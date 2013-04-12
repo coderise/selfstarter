@@ -13,11 +13,11 @@ class PreorderController < ApplicationController
 
     # Create a Stripe customer that we can charge later, and
     # attach the customer ID to the User object.
-    customer = Stripe::Customer.create(
-      :description => "Customer for #{params[:email]}",
-      :email => params[:email],
-      :card => params[:stripe_token]
-    )
+    #customer = Stripe::Customer.create(
+    #  :description => "Customer for #{params[:email]}",
+    #  :email => params[:email],
+    #  :card => params[:stripe_token]
+    #)
 
     if Settings.use_payment_options
       payment_option_id = params[:payment_option]
@@ -37,7 +37,7 @@ class PreorderController < ApplicationController
 
     # Create an order for this user.
     @order = Order.generate
-    @order.stripe_customer_id = customer.id
+    @order.stripe_customer_id = charge.id
     @order.name = Settings.product_name
     @order.price = price
     @order.user_id = @user.id
@@ -51,7 +51,7 @@ class PreorderController < ApplicationController
     @order.payment_option_id = payment_option_id
     @order.save!
 
-    Notifier.donate_email(customer, payment_option).deliver
+    #Notifier.donate_email(customer, payment_option).deliver
 
     redirect_to root_url
   end
