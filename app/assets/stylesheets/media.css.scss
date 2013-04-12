@@ -82,6 +82,11 @@
       font-size: 0.9rem;
     }
 
+    .video {
+      width: 384px;
+      height: 216px;
+    }
+
 }
 
  @media handheld, only screen and (max-width: 479px) {
@@ -122,5 +127,5 @@
     width: 240px;
     height: 135px;
   }
-  
+
  }
