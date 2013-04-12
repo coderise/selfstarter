@@ -31,16 +31,16 @@ class PreorderController < ApplicationController
     #)
 
     # Create a one-time Stripe charge and retrieve the charge object ID
-    #begin
+    begin
       charge = Stripe::Charge.create(
         :amount => (price * 100).to_i,
         :currency => "usd",
         :card => params[:stripe_token], # obtained with stripe_js
         :description => "Donation by " + params[:email]
       )
-    #rescue Stripe::StripeError => e
-      #puts e.http_status
-    #end
+    rescue Stripe::StripeError => e
+      puts e.http_status
+    end
 
     # Create an order for this user.
     @order = Order.generate

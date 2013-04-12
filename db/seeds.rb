@@ -9,7 +9,7 @@ PaymentOption.create(
     [
         {
             amount: 0.00,
-            amount_display: '$',
+            amount_display: 'Up to you',
             description: '<strong>Gratitude: </strong>We greatly appreciate any donation, and will make sure you receive a shoutout on our social media channels!',
             shipping_desc: '',
             delivery_desc: '',
