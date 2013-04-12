@@ -29,7 +29,7 @@ class PreorderController < ApplicationController
     end
 
     charge = Stripe::Charge.create(
-      :amount => price,
+      :amount => price.to_i,
       :currency => "usd",
       :card => params[:stripe_token], # obtained with Stripe.js
       :description => "Donation by " + params[:email]
