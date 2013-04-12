@@ -34,6 +34,15 @@ body {
   line-height: $line_height;
 }
 
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
 .disabled
 {
   opacity: 0.65;
