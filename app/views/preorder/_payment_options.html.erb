@@ -5,7 +5,7 @@
         <% PaymentOption.all.each_with_index do |p, index| %>
           <li>
             <%= radio_button_tag "payment_option", p.id, index == 0 ? true : false, class: 'payment_radio' %>
-            <% if p.amount_display == '$' %>
+            <% if p.amount == 0.0 %>
               <%= label_tag("payment_option_#{index}", p.amount_display) %>
               <div id="amt_wrapper">
                 <span class="currency">$</span>
