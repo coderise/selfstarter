@@ -16,7 +16,7 @@ class PreorderController < ApplicationController
       payment_option_id = params[:payment_option]
       raise Exception.new("No payment option was selected") if payment_option_id.nil?
       payment_option = PaymentOption.find(payment_option_id)
-      price = payment_option.amount.to_f == 0.0 ? price = params[:amt_gross] : payment_option.amount
+      price = payment_option.amount.to_f == 0.0 ? price = params[:amt_gross].to_f : payment_option.amount
       puts "price " + price
     else
       price = Settings.price
