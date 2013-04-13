@@ -81,7 +81,7 @@
             Please keep this message as your confirmation.
             <br><br>
 
-            <strong>Contribution amount: $</strong><%= @payment_option.amount %>
+            <strong>Contribution amount: $</strong><%= @payment_option.amount == 0.0 ? @payment_option.amt_gross : @payment_option.amount %>
             <br>
 
             <strong>Perk </strong><%= raw @payment_option.description %>
