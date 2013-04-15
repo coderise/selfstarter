@@ -85,9 +85,10 @@ header[role="banner"] ul ul{
   display: none;
   z-index: 99;
   position: absolute;
-  margin-top: 31px;
+  margin-top: 30px;
   margin-left: 0px;
   background: #11486c;
+  border-bottom: 1px solid rgba(9,161,161,0.2);
 }
 
 header[role="banner"] ul ul li {
@@ -99,4 +100,6 @@ header[role="banner"] ul ul li {
 
 header[role="banner"] ul ul li a {
   text-transform: none;
+  font-family: "PT Sans", sans-serif;
+  font-weight: normal;
 }
