@@ -52,9 +52,7 @@ payment_description: "Thanks for supporting Coderise!"
 charge_limit: 25.00
 # Stripe settings -- you'll need a Stripe account, sign up here --> https://manage.stripe.com/register
 stripe_test_publishable_key: ENV['STRIPE_TEST_PUBLISHABLE_KEY']
-stripe_test_secret_key: ENV['STRIPE_TEST_SECRET_KEY']
 stripe_live_publishable_key: ENV['STRIPE_LIVE_PUBLISHABLE_KEY']
-stripe_live_secret_key: ENV['STRIPE_LIVE_SECRET_KEY']
 
 # Do you want to use Stripe in Live or Test mode? 'live' or 'test'
 stripe_payments_mode: 'test'
