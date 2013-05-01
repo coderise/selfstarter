@@ -25,7 +25,7 @@ product_image_path: "my-product-image.png"
 value_proposition: "Code.Inspire.Create."
 
 # YouTube or Vimeo Video URL (The embed URL, without the query string options)
-video_embed_url: "http://www.youtube.com/v/Id9JMHgWqiU"
+video_embed_url: "https://www.youtube.com/v/Id9JMHgWqiU"
 
 # If set to true, then the image at "/assets/video_placeholder.png" will be shown in place of the youtube
 # video.  When the user clicks it, the vid will replace the image and start playing.
