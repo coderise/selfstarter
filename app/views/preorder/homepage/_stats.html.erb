@@ -1,26 +1,7 @@
 <div id="backing" class="twevecol">
-  <ul>
-    <li class="stats" id="backers">
-      <%= number_with_delimiter Order.current, :delimiter => "," %>
-      <span><%= Settings.primary_stat %></span>
-    </li>
-    <li class="stats" id="revenue">
-      <%= number_to_currency Order.revenue, :precision => 0 %>
-      <span>of <%= number_to_currency Settings.project_goal.to_f, :precision => 0 %></span>
-    </li>
-    <% if Settings.expiration_date.present? %>
-      <li class="stats" id="days">
-        <%= distance_of_time_in_words_to_now(Settings.expiration_date).gsub(/\D/, "") %>
-        <span><%= distance_of_time_in_words_to_now(Settings.expiration_date).gsub(/\d/, "").gsub("about", "") %> left</span>
-      </li>
-    <% else %>
-      <li class="stats" id="days">
-          &infin;
-          <span>days left</span>
-        </li>
-    <% end %>
-  </ul>
-  
+  <h2 class="raised" id="goal">
+    <%= number_with_delimiter Order.current, :delimiter => "," %>
+  </h2>
   <% if Order.revenue.to_f < Order.goal.to_f %>
     <div id='progress_bg' class='small'>
       <div id='progress' class='' style='width: <%= Order.percent %>%;'>
@@ -32,7 +13,22 @@
       </div>
       <div id='progress_text'><%= Order.percent %>% <%= Settings.progress_text %></div>
     </div>
-  <% end %> 
+  <% end %>
+  <h5 class="goal" style="text-transform: none;">
+     <%= number_to_currency Order.revenue, :precision => 0 %>
+      <span>of <%= number_to_currency Settings.project_goal.to_f, :precision => 0 %></span>
+  <h5>
+  <% if Settings.expiration_date.present? %>
+    <li class="stats" id="days">
+      <%= distance_of_time_in_words_to_now(Settings.expiration_date).gsub(/\D/, "") %>
+      <span><%= distance_of_time_in_words_to_now(Settings.expiration_date).gsub(/\d/, "").gsub("about", "") %> left</span>
+    </li>
+  <% else %>
+    <li class="stats" id="days">
+        &infin;
+        <span>days left</span>
+      </li>
+  <% end %>
 </div>
 
       
