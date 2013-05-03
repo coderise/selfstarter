@@ -18,13 +18,11 @@
       <span>Raised of <%= number_to_currency Settings.project_goal.to_f, :precision => 0 %> goal</span>
   </h5>
   <% if Settings.expiration_date.present? %>
-    <div id="days-left">
       <%= distance_of_time_in_words_to_now(Settings.expiration_date).gsub(/\D/, "") %>
       <span><%= distance_of_time_in_words_to_now(Settings.expiration_date).gsub(/\d/, "").gsub("about", "") %> left</span>
   <% else %>
         &infin;
         <span>days left</span>
-      </div>
   <% end %>
 </div>
 
