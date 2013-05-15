@@ -1,0 +1,125 @@
+/* Media
+ *************************************/
+
+ @media handheld, only screen and (max-width: 1023px) {
+ 	h2{
+    	font-size: 1.25rem;
+  	}
+
+  	h4{
+    	font-size: 1.05rem;
+  	}
+  	p {
+  		font-size: 0.85rem;
+  	}
+
+  	#checkout
+  	{
+    	input[type=text], input[type=email]
+    	{
+    		font-size: 0.75rem;
+    		padding: 0.75rem;
+  		}
+ 	  }
+
+    #backing .stats {
+      font-size: 1rem;
+      padding-right: 0.5rem;
+      padding-left: 0.5rem;
+    }
+    #backing .stats span {
+      font-size: 0.75rem;
+    }
+}
+
+@media handheld, only screen and (max-width: 767px) {
+	h2{
+    	font-size: 1.25rem;
+    	letter-spacing: .145em;
+  	}
+
+	#backing ul, #progress_bg {
+		width: 80%
+	}
+
+	#key_points{
+		margin-top: 40px;
+	}
+
+	.logo, header[role="banner"] ul {
+    	float: none;
+  	}
+
+  	header[role="banner"] ul {
+    	display: none;
+  	}
+
+  	.icon-list{
+    	display: block;
+  	}
+
+  	header[role="banner"] ul ul {
+    	margin-top: 11px;
+  	}
+
+  	header[role="banner"] ul li {
+	    float: none;
+	    padding: 10px;
+  	}	
+
+    #backing .stats {
+      font-size: 1.25rem;
+      padding-right: 1rem;
+      padding-left: 1rem;
+    }
+    #backing .stats span {
+      font-size: 0.9rem;
+    }
+
+    .video {
+      width: 384px;
+      height: 216px;
+    }
+
+}
+
+ @media handheld, only screen and (max-width: 479px) {
+ 	h2 {
+    	font-size: 1.05rem;
+  	}
+
+  	h4 {
+    	font-size: 1rem;
+    	text-align: center;
+  	}
+
+  	p, .sidebar div.payment_options ol li div.description p.full{
+    	font-size: 0.75rem;
+  	}
+
+ 	.logo{
+	    display: block;
+	    width: 94px;
+	    height: 50px;
+	    background: url(/assets/brand-icon.png) no-repeat center center;
+	}
+
+  #backing ul, #progress_bg {
+    width: auto;
+  }
+
+ 	#backing .stats {
+ 		font-size: 1.15rem;
+ 		padding-right: 0.75rem;
+		padding-left: 0.75rem;
+ 	}
+ 	#backing .stats span {
+ 		font-size: 0.9rem;
+ 	}
+
+  .video{
+    width: 240px;
+    height: 135px;
+  }
+
+ }

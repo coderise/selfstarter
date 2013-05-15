@@ -12,27 +12,26 @@
   {
     line-height: 1.5;
   }
-  #checkout
+}
+
+#checkout
   {
-    input[type=text], input[type=email]
-    {
-      padding: 15px;
-      border-radius: 10px;
-      border: 1px solid #CCC;
-      width: 350px;
-      outline: none;
-    }
     .invalid
       {
       border: 1px solid orange;
     }
     #amazon_button
     {
-      margin-top: 5px;
-      padding: 15px;
+      margin: 20px auto;
+      padding: 0.9rem;
       border: none;
     }
   }
+
+.stripe {
+  display: block;
+  text-indent: -9999px;
+  background: url("/assets/stripe.png") no-repeat center center;;
 }
 
 .sidebar
@@ -66,10 +65,14 @@
   }
   #amazon_button
   {
-    display: inline !important;
+    margin: 20px auto;
+    padding: 0.9rem;
+    border: none;
+    display: block !important;
   }
   div.payment_options
   {
+    margin-top: 20px;
     font-size: 16px;
     color: black;
     background-color: #E9E9E9;
@@ -117,8 +120,9 @@
           display: inline;
           float: left;
           color: #333;
-          font-size: 16px;
+          font-size: 1.25rem;
           font-weight: bold;
+          font-family: $secondary_font, $tertiary_font;
           padding-right: 10px;
           padding-top: 1px;
           margin: 0;
@@ -166,11 +170,38 @@
             padding: 3px;
           }
         }
+        div#amt_wrapper
+        {
+          position: relative;
+          display: inline-block;
+          overflow: hidden;
+          margin-top: 10px;
+          float: left;
+
+          span.currency
+          {
+            position: absolute;
+            top: 50%;
+            margin: -0.5rem 0.25rem 0 0.25rem;
+            font-weight: bold;
+            font-size: 1rem;
+            font-family: "PT Sans Narrow", sans-serif;
+          }
+
+          input[type=text]
+          {
+            font-family: "PT Sans Narrow", sans-serif;
+            font-weight: bold;
+          }
+        }
+
         div.description
         {
-          margin-top: -16px;
-          padding-left: 112px;
-          line-height: 24px !important;
+          *margin-top: -16px;
+          *padding-left: 112px;
+          float: left;
+
+          line-height: 150% !important;
           strong
           {
             font-weight: bold;
@@ -220,12 +251,11 @@
 
 .sidebar
   {
-  float: right;
-  width: 300px;
+  *float: right;
+  *width: 300px;
   p
   {
-    font-size: 18px;
+    font-size: 1em;
     margin-bottom: 30px;
-    line-height: 1.3;
   }
 }

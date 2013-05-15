@@ -1,4 +1,3 @@
-
 /* For modern browsers */
 .clearfix:before,
 .clearfix:after 
@@ -26,11 +25,22 @@
  }
 
 html, body {
-  width: 100%;
+  height: 100%;
+  font-size: $font_size;
 }
 
 body {
   background: $body_background;
+  line-height: $line_height;
+}
+
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
 }
 
 .disabled
@@ -46,22 +56,21 @@ form
 
 body, input, textarea 
 {
-  font-size: $font_size;
-  font-family: $primary_font, $secondary_font, $tertiary_font;
+  font-family: $primary_font, $tertiary_font;
   color: $text_color;
-  text-shadow: $text_shadow;
+  *text-shadow: $text_shadow;
   -webkit-font-smoothing: antialiased;
 }
 
 a 
 {
+  cursor: pointer;
   text-decoration: none;
   color: $link_color;
 }
 
-a:hover 
-{
-  text-decoration: underline;
+a.link{
+  color: #09acb0;
 }
 
 i 
@@ -69,7 +78,29 @@ i
   font-style: italic;
 }
 
+.wrap{
+  padding: 40px 0;
+}
 
+.wrap-mini{
+  padding: 20px 0;
+}
+
+.wrap-gray{
+  background: #f2f2f2;
+  *padding-top: 1.25rem;
+  *padding-bottom: 1.25rem;
+  margin: 0;
+  -webkit-transition: height 0.15s ease-in-out;
+  -moz-transition: height 0.15s ease-in-out;
+  -o-transition: height 0.15s ease-in-out;
+  transition: height 0.15s ease-in-out;
+}
+
+.wrap-navy{
+  background: #063a5b;
+  margin: 0;
+}
 
 
 // Used in the FAQ
@@ -99,13 +130,16 @@ details summary::-webkit-details-marker { display:none; content: ""; }
 .no-details details > summary::before { content:none }
 .no-details details.open > summary::before {   content:none }
 
-
+body h1, body h2, body h3, body h4, body h5, body h6{
+  margin-bottom: 1em;
+  text-transform: uppercase;
+}
 
 h1 {
   margin: 0 auto;
   margin-left: 380px;
   width: 174px;
-  font-family: Helvetica;
+  font-family: $secondary_font, $tertiary_font;
   font-size: 42px;
   font-weight: bold;
   color: $h1_color;
@@ -124,22 +158,32 @@ h1 {
 }
 
 h2 {
-  font-family: $primary_font, $secondary_font, $tertiary_font;
-  font-size: 45px;
+  font-family: $secondary_font, $tertiary_font;
+  font-weight: bold;
+  font-size: 1.55rem;
+  letter-spacing: .2em;
   color: $h2_color;
-  margin-bottom: 50px;
+  margin-bottom: 1em;
 }
 
 h4 {
-  font-size: 36px;
+  font-family: $secondary_font, $tertiary_font;
+  font-size: 1.25rem;
+  letter-spacing: .1em;
+  font-weight: bold;
   color: $h4_color;
-  margin-bottom: 30px;
+  margin-bottom: 1em;
 }
 
 h5 {
-  font-family: $primary_font, $secondary_font, $tertiary_font;
-  margin-bottom: 10px;
+  font-family: $secondary_font, $tertiary_font;
+  font-size: 1.15rem;
+  letter-spacing: .1em;
+  font-weight: bold;
+  margin-bottom: 1em;
   color: $h5_color;
+  text-transform: uppercase;
+  
 }
 
 .wrapper {
@@ -151,19 +195,8 @@ h5 {
   text-align: center;
 }
 
-.gray_background 
-{
-  width:  100%;
-  padding: 50px 0;
-  background: $gray_background_top_color; /* Old browsers */
-  background: -moz-linear-gradient(top,  $gray_background_top_color 0%, $gray_background_middle_color 50%, $gray_background_bottom_color 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$gray_background_top_color), color-stop(50%,$gray_background_middle_color), color-stop(100%,$gray_background_bottom_color)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top,  $gray_background_top_color 0%,$gray_background_middle_color 50%,$gray_background_bottom_color 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top,  $gray_background_top_color 0%,$gray_background_middle_color 50%,$gray_background_bottom_color 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top,  $gray_background_top_color 0%,$gray_background_middle_color 50%,$gray_background_bottom_color 100%); /* IE10+ */
-  background: linear-gradient(to bottom,  $gray_background_top_color 0%,$gray_background_middle_color 50%,$gray_background_bottom_color 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#f6f6f6', endColorstr = '#fafafa', GradientType = 0);
-  border-bottom: 1px solid $gray_background_border_color;
+strong {
+  font-weight: bold;
 }
 
 .button:hover {
@@ -178,65 +211,63 @@ h5 {
 
 body.lt-ie9 {
   .blue_button {
-    background-color: #0D97E6 !important;
+    background-color: rgba(6, 58, 91, 0.75);
     background-image: none !important;
   }
   .blue_button:hover {
-    background-color: #add8e6 !important;
+    background-color: rgba(6, 58, 91, 1) !important;
   }
 }
 
 .blue_button {
+  font-family: $secondary_font, $tertiary_font;
   display: block;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: .3em;
+  padding: 1rem;
   color: $button_color; /* text color */
-  text-shadow: 0 -1px 1px $button-text_shadow_color; /* drop shadow */
-  -moz-box-shadow:
-    0 1px 1px  $button_box_shadow_color /* drop shadow */,
-    inset 0 -1px $button_box_shadow_inset_color /* inner shadow */;
-  -webkit-box-shadow:
-    0 1px 1px $button_box_shadow_color /* drop shadow */,
-    inset 0 -1px 1px $button_box_shadow_inset_color /* inner shadow */;
-  background-image: $button_top_gradient; /* gradient fill */
-  background-image: -moz-linear-gradient(90deg, $button_top_gradient 0%, $button_bottom_gradient 100%); /* gradient fill */
-  background-image: -o-linear-gradient(90deg, $button_top_gradient 0%, $button_bottom_gradient 100%); /* gradient fill */
-  background-image: -webkit-linear-gradient(90deg, $button_top_gradient 0%, $button_bottom_gradient 100%); /* gradient fill */
-  background-image: linear-gradient(90deg, $button_top_gradient 0%, $button_bottom_gradient 100%); /* gradient fill */
+  cursor: pointer;
+  background-color: rgba(6, 58, 91, 0.75);
   -webkit-border-radius: $button_border_radius;
-  -moz-border-radius: $button_border_radius;
-  border-radius: $button_border_radius;
-  font-family: $primary_font, $secondary_font, $tertiary_font;
+     -moz-border-radius: $button_border_radius;
+          border-radius: $button_border_radius;
+  -webkit-appearance: none;
 }
 .blue_button:hover {
-  -moz-box-shadow:
-    0 1px 1px $button_box_shadow_color /* drop shadow */,
-    inset 0 -1px 1px $button_box_shadow_inset_color /* inner shadow */;
-  -webkit-box-shadow:
-    0 1px 1px$button_box_shadow_color /* drop shadow */,
-    inset 0 -1px 1px $button_box_shadow_inset_color /* inner shadow */;
-  box-shadow:
-    0 1px 1px $button_box_shadow_color /* drop shadow */,
-    inset 0 -1px 1px $button_box_shadow_inset_color /* inner shadow */;
-  background-image: $button_ie9_gradient_hover; /* gradient fill */
-  background-image: -moz-linear-gradient(90deg, $button_top_gradient_hover 0%, $button_bottom_gradient_hover 100%); /* gradient fill */
-  background-image: -o-linear-gradient(90deg, $button_top_gradient_hover 0%, $button_bottom_gradient_hover 100%); /* gradient fill */
-  background-image: -webkit-linear-gradient(90deg, $button_top_gradient_hover 0%, $button_bottom_gradient_hover 100%); /* gradient fill */
-  background-image: linear-gradient(90deg, $button_top_gradient_hover 0%, $button_bottom_gradient_hover 100%); /* gradient fill */
   text-decoration: none;  
+  background-color: rgba(6, 58, 91, 1);
+    -webkit-transition: all .25s;
+     -moz-transition: all .25s;
+          transition: all .25s;
 }
 
 .blue_button:active {
-  -moz-box-shadow:
-    0 1px 1px $button_box_shadow_color /* drop shadow */,
-    inset 0 3px 5px $button_box_shadow_inset_color /* inner shadow */;
-  -webkit-box-shadow:
-    0 1px 1px $button_box_shadow_color /* drop shadow */,
-    inset 0 3px 5px $button_box_shadow_inset_color /* inner shadow */;
-  box-shadow:
-    0 1px 1px $button_box_shadow_color /* drop shadow */,
-    inset 0 3px 5px $button_box_shadow_inset_color /* inner shadow */;
-  background-image: $button_ie9_gradient_active /* gradient fill */;
-  background-image: -moz-linear-gradient(90deg, $button_top_gradient_active 0%, $button_bottom_gradient_active 100%); /* gradient fill */
-  background-image: -o-linear-gradient(90deg, $button_top_gradient_active 0%, $button_bottom_gradient_active 100%); /* gradient fill */
-  background-image: -webkit-linear-gradient(90deg, $button_top_gradient_active 0%, $button_bottom_gradient_active 100%); /* gradient fill */
-  background-image: linear-gradient(90deg, $button_top_gradient_active 0%, $button_bottom_gradient_active 100%); /* gradient fill */
+  text-decoration: none;  
+  background-color: rgba(6, 58, 91, 1);
+    -webkit-transition: all .25s;
+     -moz-transition: all .25s;
+          transition: all .25s;
+}
+
+input[type=text], input[type=email]{
+  font-size: 1rem;
+  background-color: white;
+  outline: none;
+  border: 1px solid #e2e2e2;
+  color: #626262;
+  display: block;
+  margin: 1rem 0 0 0;
+  padding: 1rem;
+  width: 75%;
+  -webkit-appearance: none;
+    -moz-appearance: none;
+  -webkit-transition: color 0.15s ease-in-out;
+    -moz-transition: color 0.15s ease-in-out;
+      -o-transition: color 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
 }
