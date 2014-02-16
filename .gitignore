@@ -21,3 +21,5 @@ config/environments/*.local.yml
 *.sublime-workspace
 .rvmrc
 
+#Ignore .DS_Store
+.DS_Store
